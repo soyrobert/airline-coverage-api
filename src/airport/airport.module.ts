@@ -6,5 +6,6 @@ import { AirportService } from './airport.service';
 @Module({
   imports: [TypeOrmModule.forFeature([AirportEntity])],
   providers: [AirportService],
+  exports: [AirportService],
 })
 export class AirportModule {}

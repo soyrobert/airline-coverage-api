@@ -6,5 +6,6 @@ import { AirlineService } from './airline.service';
 @Module({
   imports: [TypeOrmModule.forFeature([AirlineEntity])],
   providers: [AirlineService],
+  exports: [AirlineService],
 })
 export class AirlineModule {}
