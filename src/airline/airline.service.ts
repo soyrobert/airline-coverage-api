@@ -25,7 +25,7 @@ export class AirlineService {
     });
     if (!airline)
       throw new BusinessLogicException(
-        'The airline with the given id was not found',
+        'No se encontró la aerolínea con el id proporcionado',
         BusinessError.NOT_FOUND,
       );
     return airline;
@@ -47,7 +47,7 @@ export class AirlineService {
       await this.airlineRepository.findOne({ where: { id } });
     if (!persistedAirline)
       throw new BusinessLogicException(
-        'No se encontró la aerolínea con la identificación proporcionada',
+        'No se encontró la aerolínea con el id proporcionado',
         BusinessError.NOT_FOUND,
       );
 
@@ -71,7 +71,7 @@ export class AirlineService {
     });
     if (!airline)
       throw new BusinessLogicException(
-        'No se encontró la aerolínea con la identificación proporcionada',
+        'No se encontró la aerolínea con el id proporcionado',
         BusinessError.NOT_FOUND,
       );
 
