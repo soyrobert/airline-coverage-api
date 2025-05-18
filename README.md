@@ -86,6 +86,20 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Run tests postman
+### Test Aerolíneas
+![image](https://github.com/user-attachments/assets/a71722e7-e3e7-4688-8061-63416cdad092)
+
+### Test Aeropuertos
+![image](https://github.com/user-attachments/assets/68df452f-7312-4479-adc5-22d839c53d57)
+
+### Test Aerolíneas-Aeropuertos
+![image](https://github.com/user-attachments/assets/2212d599-fbce-4228-bc97-c74f9686c6b8)
+
+## Run unit tests
+![image](https://github.com/user-attachments/assets/48ae0189-e068-485e-beeb-39617f6308ae)
+
+
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
