@@ -87,7 +87,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -178,7 +177,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -255,7 +253,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -328,7 +325,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -405,7 +401,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -478,7 +473,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -569,7 +563,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -642,7 +635,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -751,7 +743,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -852,7 +843,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
@@ -989,7 +979,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/json",
-							"name": "Content-Type",
 							"description": "",
 							"type": "text"
 						}
