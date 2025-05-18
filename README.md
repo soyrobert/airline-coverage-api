@@ -45,6 +45,34 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Iniciar base de datos
+
+```bash
+
+#  Iniciar el contenedor de PostgreSQL
+$ docker-compose up -d
+
+# Verificar que el contenedor está ejecutándose
+$ docker ps
+
+# Detener, eliminar y eliminar los volúmenes
+$ docker-compose down -v
+
+# Ver logs
+$ docker logs airline-postgres
+
+# Detener el contenedor
+$ docker-compose stop
+
+# Conectarse a base de datos
+  Host: localhost
+  Puerto: 5432
+  Usuario: postgres
+  Contraseña: postgres
+  Base de datos: airline
+```
+
+
 ## Run tests
 
 ```bash
@@ -57,6 +85,20 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+## Run tests postman
+### Test Aerolíneas
+![image](https://github.com/user-attachments/assets/a71722e7-e3e7-4688-8061-63416cdad092)
+
+### Test Aeropuertos
+![image](https://github.com/user-attachments/assets/68df452f-7312-4479-adc5-22d839c53d57)
+
+### Test Aerolíneas-Aeropuertos
+![image](https://github.com/user-attachments/assets/2212d599-fbce-4228-bc97-c74f9686c6b8)
+
+## Run unit tests
+![image](https://github.com/user-attachments/assets/48ae0189-e068-485e-beeb-39617f6308ae)
+
 
 ## Deployment
 
@@ -97,30 +139,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-
-
-## Base de datos
-
-```bash
-#  Iniciar el contenedor de PostgreSQL
-$ docker-compose up -d
-
-# Verificar que el contenedor está ejecutándose
-$ docker ps
-
-# Detener el contenedor
-$ docker-compose stop
-
-# Detener, eliminar y también eliminar los volúmenes
-$ docker-compose down -v
-
-# Ver logs
-$ docker logs airline-postgres
-
-# Conectarse a base de datos
-  Host: localhost
-  Puerto: 5432
-  Usuario: postgres
-  Contraseña: postgres
-  Base de datos: airline
-```
