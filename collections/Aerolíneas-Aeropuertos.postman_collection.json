@@ -14,7 +14,17 @@
 					"script": {
 						"exec": [
 							"var data = pm.response.json();\r",
-							"pm.globals.set(\"airline_id\", data.id);"
+							"pm.globals.set(\"airline_id\", data.id);\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has airline data\", function () {\r",
+							"    pm.expect(data.name).to.eql(\"Aerolínea para Pruebas de Asociación\");\r",
+							"    pm.expect(data.description).to.include(\"Aerolínea creada para probar la asociación con aeropuertos\");\r",
+							"    pm.expect(data.website).to.eql(\"https://www.aerolinea-prueba.com\");\r",
+							"});"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -104,7 +114,18 @@
 					"script": {
 						"exec": [
 							"var data = pm.response.json();\r",
-							"pm.globals.set(\"airport_id\", data.id);"
+							"pm.globals.set(\"airport_id\", data.id);\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has airport data\", function () {\r",
+							"    pm.expect(data.name).to.eql(\"Aeropuerto para Pruebas de Asociación\");\r",
+							"    pm.expect(data.code).to.eql(\"APT\");\r",
+							"    pm.expect(data.country).to.eql(\"País de Prueba\");\r",
+							"    pm.expect(data.city).to.eql(\"Ciudad de Prueba\");\r",
+							"});"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -490,7 +511,25 @@
 					"script": {
 						"exec": [
 							"var data = pm.response.json();\r",
-							"pm.globals.set(\"non_associated_airport_id\", data.id);"
+							"pm.globals.set(\"non_associated_airport_id\", data.id);\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"var data = pm.response.json();\r",
+							"pm.globals.set(\"non_associated_airport_id\", data.id);\r",
+							"\r",
+							"pm.test(\"Response has airport data\", function () {\r",
+							"    pm.expect(data.name).to.eql(\"Aeropuerto No Asociado\");\r",
+							"    pm.expect(data.code).to.eql(\"XYZ\");\r",
+							"    pm.expect(data.country).to.eql(\"País de Prueba\");\r",
+							"    pm.expect(data.city).to.eql(\"Ciudad de Prueba\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Airport ID is saved to variable\", function () {\r",
+							"    pm.expect(pm.globals.get(\"non_associated_airport_id\")).to.eql(data.id);\r",
+							"});"
 						],
 						"type": "text/javascript",
 						"packages": {}
