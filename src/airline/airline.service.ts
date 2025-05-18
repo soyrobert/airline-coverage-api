@@ -32,13 +32,16 @@ export class AirlineService {
   }
 
   async create(airline: AirlineEntity): Promise<AirlineEntity> {
-    // Validar que la fecha de fundación esté en el pasado
-    if (airline.foundationDate > new Date()) {
+    const foundationDate = new Date(airline.foundationDate);
+
+    if (foundationDate > new Date()) {
       throw new BusinessLogicException(
         'La fecha de fundación debe ser pasada',
         BusinessError.PRECONDITION_FAILED,
       );
     }
+
+    airline.foundationDate = foundationDate;
     return await this.airlineRepository.save(airline);
   }
 
